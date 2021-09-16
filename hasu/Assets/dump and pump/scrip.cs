@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using photon.Pun;
+using Photon.Pun;
 using UnityEngine.SceneManagement;
 
-public class scrip : MonoBehaviour : MonoBehaviourPunCallbacks
+public class scrip : MonoBehaviourPunCallbacks
 {
     
     // Start is called before the first frame update
@@ -13,13 +13,13 @@ public class scrip : MonoBehaviour : MonoBehaviourPunCallbacks
         PhotonNetwork.ConnectUsingSettings();
     }
 
-    public override void onconnectedtomaster()
+    public override void OnConnectedToMaster()
     {
-        photonnetwork.joinlobby();
+        PhotonNetwork.JoinLobby();
     }
-  public override void onjoinedlobby()
+  public override void OnJoinedLobby()
    {
-       SceneManager.LoadScene("0");
+       SceneManager.LoadScene(0);
    }
 
 
