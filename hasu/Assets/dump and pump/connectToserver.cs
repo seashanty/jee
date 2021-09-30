@@ -1,5 +1,11 @@
+// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="connectToserver.cs" company="Exit Games GmbH"/>
+// <summary>Prototyping / sample code for Photon Realtime.</summary>
+// <author>developer@exitgames.com</author>
+// --------------------------------------------------------------------------------------------------------------------
+
 using UnityEngine;
-using photon.pun;
+using Photon.Pun;
 
 
 public class connectToserver : MonoBehaviour
