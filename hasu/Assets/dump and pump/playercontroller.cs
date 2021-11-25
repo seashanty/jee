@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+
 
 public class playercontroller : MonoBehaviour
 {
@@ -24,18 +26,25 @@ public class playercontroller : MonoBehaviour
 
     private Vector3 moveDir;
 
+    PhotonView View;
+
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        View = GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(View.IsMine)
+        {
         CheckIfGrounded();
         Move();
         Jump();
+        }
+
     }
     private void Jump()
     {
